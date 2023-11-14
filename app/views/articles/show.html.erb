@@ -1,0 +1,16 @@
+
+<div class="d-flex align-items-baseline gap-3">
+  <h1><%= @article.title %> </h1>
+
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa-solid fa-pen-to-square h4"></i>
+  <% end %>
+
+  <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+    <i class="fa-solid fa-xmark h4"></i>
+  <% end %>
+</div>
+
+<hr>
+
+<p><%= @article.content %> </p>
